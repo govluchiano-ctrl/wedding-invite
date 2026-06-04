@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Максим & Яна | Свадьба в Тоскане</title>
-    <!-- Шрифты -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Google Fonts: Allura (бесплатный, каллиграфический) -->
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+    <!-- Основной шрифт для текста -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
     <style>
         * {
             margin: 0;
@@ -21,9 +25,11 @@
             line-height: 1.5;
         }
 
-        h1, h2, h3, .serif {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 600;
+        /* Все заголовки и имена — шрифт Allura */
+        h1, h2, h3, .serif, .hero h1, .section-title, .detail-card h3, .hero .date, .timer-number {
+            font-family: 'Allura', cursive;
+            font-weight: 400;
+            letter-spacing: 1px;
         }
 
         .container {
@@ -32,10 +38,10 @@
             padding: 0 24px;
         }
 
-        /* Hero с итальянским пейзажем */
+        /* Hero с картинкой (ваша ссылка) */
         .hero {
             min-height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.2)), url('https://images.pexels.com/photos/1566837/italy-tuscany-countryside-nature-1566837.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover no-repeat;
+            background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.2)), url('https://i.pinimg.com/originals/51/b8/91/51b8910293bd30b476b6dedba102eb64.jpg') center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -53,25 +59,22 @@
         }
 
         .hero h1 {
-            font-size: 4.5rem;
-            letter-spacing: 2px;
+            font-size: 5rem;
             margin-bottom: 16px;
         }
 
         .hero .date {
-            font-size: 1.5rem;
-            font-family: 'Montserrat', sans-serif;
-            letter-spacing: 4px;
+            font-size: 2rem;
             margin-top: 16px;
         }
 
         .hero .invite-text {
-            font-size: 1.2rem;
-            margin: 24px 0 16px;
+            font-size: 1.5rem;
             font-style: italic;
+            margin-bottom: 8px;
+            font-family: 'Montserrat', sans-serif;
         }
 
-        /* Акценты лимонного и мятного */
         section {
             padding: 80px 0;
             border-bottom: 1px solid #e9e0cf;
@@ -79,7 +82,7 @@
 
         .section-title {
             text-align: center;
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: 48px;
             color: #8a9a5b;
         }
@@ -110,9 +113,7 @@
 
         .timer-number {
             font-size: 3.5rem;
-            font-weight: 700;
-            font-family: 'Cormorant Garamond', serif;
-            color: #e2b13b;
+            color: #c0cc19;
         }
 
         .timer-label {
@@ -121,7 +122,7 @@
             letter-spacing: 2px;
         }
 
-        /* Детали */
+        /* Детали дня */
         .event-details {
             display: flex;
             flex-wrap: wrap;
@@ -141,16 +142,16 @@
 
         .detail-card i {
             font-size: 2.5rem;
-            color: #e2b13b;
+            color: #c0cc19;
             margin-bottom: 20px;
         }
 
         .detail-card h3 {
-            font-size: 1.8rem;
+            font-size: 2rem;
             margin-bottom: 12px;
         }
 
-        /* Цветовая гамма (дресс-код) */
+        /* Цветовая гамма (новые цвета) */
         .color-palette {
             display: flex;
             justify-content: center;
@@ -191,11 +192,14 @@
             border-radius: 32px;
             padding: 40px;
             text-align: center;
-            font-style: italic;
-            border-left: 6px solid #e2b13b;
+            border-left: 6px solid #c0cc19;
+        }
+        .gift-box p {
+            font-size: 1.1rem;
+            line-height: 1.6;
         }
 
-        /* Форма RSVP */
+        /* Форма */
         .rsvp-form {
             background: white;
             border-radius: 32px;
@@ -215,18 +219,18 @@
             padding: 14px 18px;
             border: 1px solid #ddd2bc;
             border-radius: 40px;
-            font-family: inherit;
+            font-family: 'Montserrat', sans-serif;
             font-size: 1rem;
             transition: 0.2s;
         }
         input:focus, select:focus, textarea:focus {
             outline: none;
-            border-color: #e2b13b;
-            box-shadow: 0 0 0 3px rgba(226,177,59,0.2);
+            border-color: #c0cc19;
+            box-shadow: 0 0 0 3px rgba(192,204,25,0.2);
         }
         button {
-            background-color: #8a9a5b;
-            color: white;
+            background-color: #c0cc19;
+            color: #2c3e2f;
             border: none;
             padding: 14px 32px;
             font-size: 1rem;
@@ -237,7 +241,8 @@
             width: 100%;
         }
         button:hover {
-            background-color: #6b7e42;
+            background-color: #a1ab14;
+            color: white;
         }
         .form-message {
             margin-top: 20px;
@@ -253,26 +258,13 @@
         }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
+            .hero h1 { font-size: 3rem; }
+            .hero .date { font-size: 1.4rem; }
             .timer-item { padding: 15px 20px; min-width: 70px; }
             .timer-number { font-size: 2rem; }
             .section-title { font-size: 2.2rem; }
             .container { padding: 0 16px; }
             section { padding: 50px 0; }
-        }
-
-        /* Декоративные лимоны */
-        .lemon-bg {
-            position: relative;
-        }
-        .lemon-bg::before {
-            content: "🍋";
-            font-size: 100px;
-            opacity: 0.03;
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            pointer-events: none;
         }
     </style>
 </head>
@@ -320,33 +312,32 @@
                 <p>Голландский домик<br>г. Москва, ул. Юности, 2</p>
             </div>
             <div class="map-container">
-                <!-- Карта Кусково (Голландский домик) -->
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.23456789!2d37.805!3d55.735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b534d0c4b5b7e5%3A0x6b2f3c8d1e0a5f7!2z0JPRg9GB0YPRgNCw0LDRgNGD0LHQtdGC0LA!5e0!3m2!1sru!2sru!4v1650000000000!5m2!1sru!2sru" allowfullscreen="" loading="lazy"></iframe>
             </div>
             <p class="dresscode-text" style="margin-top: 24px;">Усадебный парк, атмосфера XVIII века. Пожалуйста, учитывайте, что часть мероприятий пройдёт на улице.</p>
         </section>
 
-        <!-- Цветовая гамма (дресс-код) -->
+        <!-- Цветовая гамма -->
         <section>
             <h2 class="section-title">Цветовая гамма</h2>
             <div class="color-palette">
-                <div class="color" style="background: #C0DF3B;"></div> <!-- лаймовый -->
-                <div class="color" style="background: #FFF44F;"></div>  <!-- лимонный -->
-                <div class="color" style="background: #A3D4E0;"></div>  <!-- нежно-голубой -->
-                <div class="color" style="background: #98FB98;"></div>   <!-- мятный -->
+                <div class="color" style="background: #eeffee;"></div>
+                <div class="color" style="background: #c0cc19;"></div>
+                <div class="color" style="background: #fef378;"></div>
+                <div class="color" style="background: #b3f2da;"></div>
             </div>
             <div class="dresscode-text">
-                <p>Вдохновляясь итальянским солнцем и лимонными рощами, мы будем рады видеть вас в оттенках лайма, лимона, нежно-голубого и мяты.<br>Создадим вместе яркую и свежую атмосферу!</p>
+                <p>Вдохновляясь итальянским солнцем и лимонными рощами, мы будем рады видеть вас в оттенках свежей зелени, яркого лайма, нежной мяты и солнечного лимона.<br>Создадим вместе яркую и свежую атмосферу!</p>
             </div>
         </section>
 
-        <!-- Подарки -->
+        <!-- Подарки (обновлённый текст) -->
         <section>
             <h2 class="section-title">Пожелания подарков</h2>
             <div class="gift-box">
-                <i class="fas fa-envelope-open-text" style="font-size: 2.5rem; color:#e2b13b; margin-bottom: 20px; display: inline-block;"></i>
-                <p style="font-size: 1.1rem;">Ваше присутствие — лучший подарок. Если вы всё же захотите нас порадовать, будем благодарны за <strong>вклад в семейный бюджет</strong> или бутылку хорошего вина.</p>
-                <p style="margin-top: 20px;">Дорогие гости, поскольку сразу после торжества мы улетаем в свадебное путешествие, а наши сердца уже переполнены счастьем, <strong>просим вас не дарить нам цветы</strong>. Пусть лучше эти нежные лепестки останутся в ваших улыбках, а ваши тёплые слова и объятия станут лучшим украшением нашего нового пути!</p>
+                <i class="fas fa-envelope-open-text" style="font-size: 2.5rem; color:#c0cc19; margin-bottom: 20px; display: inline-block;"></i>
+                <p>Ваше присутствие — лучший подарок. Если вы всё же захотите нас порадовать, будем благодарны за <strong>вклад в семейный бюджет</strong>.</p>
+                <p style="margin-top: 20px;">Дорогие гости, поскольку сразу после торжества мы улетаем в свадебное путешествие, а наши сердца уже переполнены счастьем, просим вас <strong>не дарить цветы</strong>, а преподнести бутылку хорошего вина.</p>
             </div>
         </section>
 
@@ -358,7 +349,7 @@
                     <input type="hidden" name="_subject" value="Новый ответ на RSVP (Максим & Яна)">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="_next" value="https://govluchiano-ctrl.github.io/wedding-invite/thanks.html"> <!-- опционально -->
+                    <input type="hidden" name="_next" value="https://govluchiano-ctrl.github.io/wedding-invite/thanks.html">
                     
                     <div class="form-group">
                         <label>Ваше имя и фамилия *</label>
@@ -400,8 +391,8 @@
 </footer>
 
 <script>
-    // Дата свадьбы: 19 августа 2026 года, 15:30
-    const weddingDate = new Date(2026, 7, 19, 15, 30, 0); // август = 7 (0-индекс)
+    // Дата свадьбы: 19 августа 2026, 15:30
+    const weddingDate = new Date(2026, 7, 19, 15, 30, 0);
 
     function updateTimer() {
         const now = new Date().getTime();
